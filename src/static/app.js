@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Time range mappings for the dropdown
   const timeRanges = {
     morning: { start: "06:00", end: "08:00" }, // Before school hours
-    afternoon: { start: "15:00", end: "18:00" }, // After school hours
+    afternoon: { start: "15:00", end: "21:00" }, // After school hours (including evening activities)
     weekend: { days: ["Saturday", "Sunday"] }, // Weekend days
   };
 
@@ -324,8 +324,10 @@ document.addEventListener("DOMContentLoaded", () => {
       name.includes("music") ||
       name.includes("theater") ||
       name.includes("drama") ||
+      name.includes("manga") ||
       desc.includes("creative") ||
-      desc.includes("paint")
+      desc.includes("paint") ||
+      desc.includes("graphic novels")
     ) {
       return "arts";
     } else if (
